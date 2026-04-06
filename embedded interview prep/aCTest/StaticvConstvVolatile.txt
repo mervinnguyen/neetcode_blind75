@@ -1,0 +1,41 @@
+What are the uses of the keyword static?
+
+1) static declared variable inside the scope of a function retains its value even after performing the execution of the function.
+2) static declared as a global variable outside the scope of a function can only be called inside of the module and no where else.
+3) static declared for functions can only be called within functions of the same module.
+
+//What are the uses of the keyword const?
+
+1) const declared as a variable inside the scope of a function tells the function that the variable cannot be changed.
+2) const basically means "read-only" and cannot write a new value to the variable.
+
+What do the following incomplete declarations mean?
+
+1) const int a;     //declares an integer a that is read-only and cant be changed
+2) int const a;     //declares a variable a that is read-only but is an integer 
+3) int *const a;    //declares a read-only pointer variable a, pointing to an integer stored in memory. The pointer cannot point to anywhere else in memory.
+4) int const *a const;     //declares a read-only variable a to read-only variable integer in memory. Both pointer and integer cannot be changed. 
+
+What does the keyword volatile mean? Give three different examples of its use.
+
+keyword "volatile" tells the variable that it can change any time in the scope of the function. (prevents the compiler from optimizing repeated access to variable, ensuring every read/write happens in memory)
+
+Types of "volatile" variables:
+    1) hardware peripheral registers (status registers) (BME280 sensor or SPI transaction variables)
+    2) non-stack variables (heap) variables referenced in ISR.
+    3) variables (resources) shared my multiple tasks in a multi-threaded application. (can use mutex or semaphore to protect shared resource) 
+
+Follow Up Question:
+    1) Can a parameter be both const and volatile? Explain your answer.
+    Yes, a parameter can be both const and volatile, such as a hardware peripheral register where the register is read only, but can change unexpectedly due to an interrupt.
+    //mental note: (each hexadecimal place represents 4 bytes, to calculate values 16^0(digit0) + 16^1(digit1) + 16^2(digit2)...)
+
+    2) Can a pointer be volatile? Explain your answer?
+    Yes it can volailte. For instance, if an interrupt service routine modifies the pointer to a buffer(temporary memory in RAM) address.
+
+    3) What is wrong with the following function
+    int square(volatile int *ptr){
+        return *ptr **ptr;
+    }
+
+    Casts a pointer to a pointer with the same variable name.
