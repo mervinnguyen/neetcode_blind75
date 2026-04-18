@@ -7,7 +7,6 @@ Solutions, explanations, and notes for the NeetCode and Blind 75 interview quest
 | Directory | Description |
 |---|---|
 | `python-solutions/` | Python implementations focused on clarity and efficiency |
-| `cpp-solutions/` | C++ implementations optimized for performance |
 | `embedded-interview-prep/` | Embedded systems prep: C/C++ examples, exercises, and core concepts |
 
 ---
