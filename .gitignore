@@ -1,2 +1,17 @@
 # Ignore Doxygen automation script
 Neetcode-blind75/doxygen_automate.py
+
+# Ignore compiled objects and executables in all folders
+*.o
+*.obj
+*.lo
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+*.out
+*.elf
+
+# Ignore WindBorne systems application folder
+windborne systems application/
