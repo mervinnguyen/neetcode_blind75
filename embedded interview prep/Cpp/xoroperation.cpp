@@ -25,12 +25,8 @@
 
 int xor_operation(int n, int start){
     int result = 0;
-    int nums[n];
     for (int i = 0; i < n; i++){
-        nums[i] = start + 2 * i;
-    }
-    for (int i = 0; i < n; i++){
-        result ^= nums[i];
+        result ^= start + 2 * i;
     }
     printf("The bitwise XOR of all elements of 'nums' is: %d\n", result);
     return 0;
