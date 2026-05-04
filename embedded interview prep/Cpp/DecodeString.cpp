@@ -70,6 +70,5 @@
       cout << decode_string("3[a2[c]]") << endl;            // "accaccacc"
       cout << decode_string("2[abc]3[cd]ef") << endl;       // "abcabccdcdcdef"
       cout << decode_string("a2[b2[c]]") << endl;           // "abccbcc"
-
       return 0;
  }
