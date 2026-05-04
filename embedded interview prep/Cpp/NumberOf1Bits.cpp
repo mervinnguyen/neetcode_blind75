@@ -10,7 +10,6 @@
  * - For each bit, check if it is 1 using (n & 1).
  * - Increment count for each 1 bit found.
  * - Shift n right by 1 after each check.
- * 
  */
 
 #include <iostream>
