@@ -15,3 +15,6 @@ Neetcode-blind75/doxygen_automate.py
 
 # Ignore WindBorne systems application folder
 windborne systems application/
+
+# Ignore interview prompt files
+embedded interview prep/Interviews/
